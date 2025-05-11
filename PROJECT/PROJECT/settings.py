@@ -25,9 +25,10 @@ SECRET_KEY = 'django-insecure-#54f$%m4s1p7of!+ve%wwr5sq!6b%&ckjg2gble=c)7_0n-0jq
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
 ALLOWED_HOSTS = ['konjiki-no-kansuke.com', 'www.konjiki-no-kansuke.com']
 
+#DEBUG = True
+#ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'helloworld',  # Custom app
+    'App',  # Custom app
 ]
 
 MIDDLEWARE = [
@@ -68,26 +69,32 @@ TEMPLATES = [
     },
 ]
 
-STATIC_URL = "static/"
-STATICFILES_DIRS = [ BASE_DIR / "static" ]         # 追加 (開発用)
-STATIC_ROOT = BASE_DIR / "staticfiles"             # collectstatic 用
-
+# Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'PROJECT.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database-django-202505',
-        'USER': 'admin',
-        'PASSWORD': 'Kawaz0823',
-        'HOST': 'database-django-202505.chss6wuwyrou.us-east-2.rds.amazonaws.com',
-        'PORT': '3306',  
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'database-django-202505',
+#        'USER': 'admin',
+#        'PASSWORD': 'Kawaz0823',
+#        'HOST': 'database-django-202505.chss6wuwyrou.us-east-2.rds.amazonaws.com',
+#        'PORT': '3306',  
+#    }
+#}
 
 
 # Password validation

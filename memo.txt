@@ -1,0 +1,8 @@
+実行 --> python manage.py runserver
+
+django-admin startproject <projectname>
+cd <projectname>
+python manage.py startapp <app_name>
+
+python manage.py makemigrations <app_name>
+python manage.py migrate
