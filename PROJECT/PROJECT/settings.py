@@ -68,6 +68,10 @@ TEMPLATES = [
     },
 ]
 
+STATIC_URL = "static/"
+STATICFILES_DIRS = [ BASE_DIR / "static" ]         # 追加 (開発用)
+STATIC_ROOT = BASE_DIR / "staticfiles"             # collectstatic 用
+
 WSGI_APPLICATION = 'PROJECT.wsgi.application'
 
 
