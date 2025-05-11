@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#54f$%m4s1p7of!+ve%wwr5sq!6b%&ckjg2gble=c)7_0n-0jq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-#ALLOWED_HOSTS = ['konjiki-no-kansuke.com', 'www.konjiki-no-kansuke.com', 'localhost', '127.0.0.1']
+DEBUG = False
+ALLOWED_HOSTS = ['konjiki-no-kansuke.com', 'www.konjiki-no-kansuke.com', 'localhost', '127.0.0.1']
 
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+#DEBUG = True
+#ALLOWED_HOSTS = ['*']
 
 # Application definition
 
